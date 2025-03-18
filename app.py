@@ -807,6 +807,7 @@ def generate_response_with_llm(state):
         ("human", state["conversation_history"][-1]["content"])
     ])
 
+
     # Set up the LLM
     llm = ChatOpenAI(model="gpt-4o-mini")
 
