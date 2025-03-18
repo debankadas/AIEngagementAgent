@@ -1,0 +1,106 @@
+erDiagram
+    EXHIBITOR ||--o{ EVENT : participates_in
+    EXHIBITOR ||--o{ LEAD : owns
+    EXHIBITOR ||--o{ PRODUCT : offers
+    EVENT ||--o{ LEAD : generated_at
+    LEAD ||--o{ CONVERSATION : has
+    LEAD ||--o{ FOLLOW_UP_TASK : requires
+    LEAD ||--o{ PRODUCT_INTEREST : has_interest_in
+    PRODUCT ||--o{ PRODUCT_INTEREST : referenced_in
+
+    EXHIBITOR {
+        string id PK
+        string company_name
+        string contact_name
+        string email
+        string phone
+        string industry
+        string logo_url
+        text company_description
+        json company_metadata
+        datetime created_at
+        datetime updated_at
+    }
+
+    EVENT {
+        string id PK
+        string name
+        string location
+        date start_date
+        date end_date
+        string booth_number
+        string event_type
+        json event_metadata
+        datetime created_at
+        datetime updated_at
+    }
+
+    LEAD {
+        string id PK
+        string exhibitor_id FK
+        string event_id FK
+        string full_name
+        string company
+        string role
+        string email
+        string phone
+        string website
+        string location
+        enum interest_level
+        string preferred_contact
+        json lead_metadata
+        datetime created_at
+        datetime updated_at
+    }
+
+    CONVERSATION {
+        string id PK
+        string lead_id FK
+        enum conversation_type
+        array messages
+        json insights
+        json transcription
+        string language
+        datetime start_time
+        datetime end_time
+        datetime created_at
+        datetime updated_at
+    }
+
+    FOLLOW_UP_TASK {
+        string id PK
+        string lead_id FK
+        string assigned_to
+        enum task_type
+        string description
+        enum status
+        datetime due_date
+        datetime completion_date
+        json task_details
+        datetime created_at
+        datetime updated_at
+    }
+
+    PRODUCT {
+        string id PK
+        string exhibitor_id FK
+        string name
+        string category
+        text description
+        json specifications
+        string image_url
+        number min_order_quantity
+        json pricing_details
+        datetime created_at
+        datetime updated_at
+    }
+
+    PRODUCT_INTEREST {
+        string id PK
+        string lead_id FK
+        string product_id FK
+        enum interest_level
+        text notes
+        json objections
+        datetime created_at
+    }
