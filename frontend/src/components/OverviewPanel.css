@@ -1,0 +1,187 @@
+.overview-panel-component {
+  width: 350px; /* Fixed width */
+  flex-shrink: 0;
+  background-color: var(--bg-tertiary);
+  padding: 1.5rem;
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Space between sections */
+  border-left: 1px solid var(--border-color); /* Separator from chat */
+}
+
+.overview-panel-component h3,
+.overview-panel-component h4,
+.overview-panel-component h5 {
+  margin: 0 0 0.75rem 0;
+  color: var(--text-primary); /* Heading color */
+}
+
+.overview-panel-component h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem; /* More space after main heading */
+}
+
+.overview-panel-component h4 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.overview-panel-component h5 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.lead-summary-card {
+  background-color: var(--bg-primary); /* Light background for card */
+  padding: 1rem;
+  border-radius: 0.375rem;
+  border: 1px solid var(--border-color);
+  position: relative; /* For stage badge positioning */
+}
+
+.company-info-section {
+  margin-top: -0.5rem;
+}
+
+.company-type {
+  margin-bottom: 0.75rem;
+}
+
+.company-type-badge-overview {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
+.product-varieties-card {
+  background-color: var(--product-card-bg); /* Product card background */
+  padding: 1rem;
+  border-radius: 0.375rem;
+  border: 1px solid var(--product-card-border);
+  margin-top: 0.5rem;
+}
+
+.product-varieties-card ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-varieties-card li {
+  padding: 0.25rem 0;
+  font-size: 0.875rem;
+  color: var(--product-card-text);
+  border-bottom: 1px solid var(--product-card-border);
+}
+
+.product-varieties-card li:last-child {
+  border-bottom: none;
+}
+
+.collected-fields-section {
+  margin-top: 0.5rem;
+}
+
+.collected-fields-list {
+  background-color: var(--bg-primary);
+  padding: 1rem;
+  border-radius: 0.375rem;
+  border: 1px solid var(--border-color);
+}
+
+.collected-field-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.875rem;
+}
+
+.collected-field-item:last-child {
+  border-bottom: none;
+}
+
+.field-label {
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.field-value {
+  color: var(--text-primary);
+  font-weight: 500;
+  text-align: right;
+  word-break: break-word;
+  max-width: 60%;
+}
+
+.lead-details p {
+  margin: 0 0 0.25rem 0;
+  font-size: 0.875rem;
+  color: var(--text-secondary); /* Medium gray text */
+}
+
+.lead-details .lead-name {
+  font-weight: 600; /* Make name bold */
+  color: var(--text-primary); /* Darker text */
+  font-size: 1rem;
+}
+.lead-details .lead-company {
+    font-weight: 500;
+}
+
+.lead-details .start-time {
+    font-size: 0.8rem;
+    color: var(--text-muted); /* Lighter gray */
+}
+
+
+.stage-badge-overview {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background-color: var(--accent-color-light); /* Light accent */
+  color: var(--accent-color); /* Accent */
+  padding: 0.25rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.quick-actions-section button,
+.suggested-questions-section button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.6rem 1rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--btn-default-border); /* Light border */
+  border-radius: 0.375rem;
+  background-color: var(--btn-default-bg);
+  color: var(--btn-default-text); /* Medium gray text */
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.quick-actions-section button:hover,
+.suggested-questions-section button:hover {
+  background-color: var(--btn-default-hover-bg); /* Slightly darker background */
+  border-color: var(--btn-default-hover-border); /* Darker border */
+  color: var(--text-primary); /* Darker text */
+}
+
+/* Remove default button focus outline for aesthetics, ensure accessibility via other means if needed */
+.quick-actions-section button:focus,
+.suggested-questions-section button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2); /* Add focus ring */
+}

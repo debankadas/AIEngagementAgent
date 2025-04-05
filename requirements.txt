@@ -1,0 +1,58 @@
+# Core LangChain and LangGraph libraries
+langchain
+langchain-core
+langchain-anthropic
+langchain-openai
+langgraph
+langchain-community
+
+# LLM APIs
+anthropic
+openai
+
+# Database integrations
+firebase-admin
+psycopg2-binary  # Use binary for easier installation
+
+# OCR and Image Processing
+google-cloud-vision
+pytesseract
+Pillow
+
+# Speech-to-Text (optional)
+google-cloud-speech
+
+# Google Calendar API (optional)
+google-auth
+google-api-python-client
+
+# Web API
+fastapi
+uvicorn
+websockets
+
+# Utilities
+pydantic
+python-dotenv
+python-multipart
+email-validator
+python-jose  # For JWT handling
+passlib  # For password hashing
+
+# Vector stores for progressive memory
+chromadb
+
+# Testing
+pytest
+pytest-asyncio
+httpx  # For testing FastAPI
+
+# Typing extensions
+typing-extensions
+
+# Development tools
+black
+isort
+flake8
+PyYAML  # For reading config.yaml
+pytz    # For timezone handling in scheduling tool

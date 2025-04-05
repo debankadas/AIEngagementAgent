@@ -1,0 +1,181 @@
+.chat-area-component {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-tertiary); /* Chat background */
+  border-right: 1px solid var(--border-color); /* Separator line */
+  overflow: hidden; /* Manage scrolling within .messages-container */
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
+  font-weight: 500;
+  color: var(--text-primary);
+  flex-shrink: 0;
+}
+
+.stage-indicator {
+  font-size: 0.8rem;
+  background-color: var(--accent-color-light); /* Light accent */
+  color: var(--accent-color); /* Accent color */
+  padding: 0.25rem 0.6rem;
+  border-radius: 9999px;
+  font-weight: 500;
+}
+
+.messages-container {
+  flex-grow: 1;
+  overflow-y: auto; /* Enable scrolling for messages */
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.message-bubble {
+  max-width: 75%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem; /* Rounded message bubbles */
+  word-wrap: break-word;
+  position: relative; /* For timestamp positioning if needed */
+}
+
+.message-bubble.assistant {
+  background-color: var(--message-assistant); /* Light background */
+  color: var(--text-primary); /* Text color */
+  align-self: flex-start;
+  border-bottom-left-radius: 0.125rem; /* Slightly flatter corner */
+}
+
+.message-bubble.human {
+  background-color: var(--message-human); /* Accent color */
+  color: var(--message-human-text);
+  align-self: flex-end;
+  border-bottom-right-radius: 0.125rem; /* Slightly flatter corner */
+}
+
+.message-bubble p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.message-bubble .timestamp {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--message-timestamp-light); /* Gray timestamp */
+    margin-top: 0.25rem;
+    text-align: right;
+}
+.message-bubble.human .timestamp {
+    color: var(--message-timestamp-dark); /* Lighter gray for dark background */
+}
+
+/* Confirmation buttons for business card info */
+.confirmation-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.25rem;
+}
+
+.confirm-button, .reject-button {
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.confirm-button {
+    background-color: var(--success-bg); /* Green */
+    color: var(--success-text);
+}
+
+.confirm-button:hover {
+    background-color: #16a34a; /* Darker green */
+}
+
+.reject-button {
+    background-color: var(--error-bg); /* Red */
+    color: var(--error-text);
+}
+
+.reject-button:hover {
+    background-color: #e11d48; /* Darker red */
+}
+
+.message-bubble.system {
+    background-color: var(--message-system); /* Very light background */
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    align-self: center;
+    width: 90%;
+    max-width: 90%;
+    font-style: italic;
+}
+
+.input-area-container {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  padding: 0.75rem;
+  border-top: 1px solid var(--border-color); /* Separator line */
+  background-color: var(--bg-primary);
+  flex-shrink: 0;
+  gap: 0.5rem;
+}
+
+.input-area-container textarea {
+  flex-grow: 1;
+  padding: 0.75rem;
+  border: 1px solid var(--btn-default-border);
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  resize: none; /* Prevent manual resizing */
+  line-height: 1.4;
+  max-height: 100px; /* Limit max height */
+  overflow-y: auto; /* Allow scrolling if text exceeds max height */
+  font-family: inherit; /* Use the same font as the rest of the app */
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+.input-area-container textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+.camera-button, .send-button {
+  flex-shrink: 0; /* Prevent buttons from shrinking */
+  padding: 0.6rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem; /* Icon size */
+  transition: background-color 0.2s ease;
+}
+
+.camera-button {
+    background-color: var(--btn-default-bg); /* Light background */
+    color: var(--btn-default-text);
+}
+.camera-button:hover {
+    background-color: var(--btn-default-hover-bg);
+}
+
+.send-button {
+    background-color: var(--accent-color); /* Accent color */
+    color: white;
+}
+.send-button:hover {
+    background-color: var(--accent-hover); /* Darker accent */
+}

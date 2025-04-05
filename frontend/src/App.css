@@ -1,0 +1,291 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.company-selector-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-secondary);
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent-color); /* Indigo background */
+  color: #ffffff;
+  flex-shrink: 0; /* Prevent header from shrinking */
+}
+
+.header-left h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.header-left p {
+  font-size: 0.875rem;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.connection-status {
+  font-size: 0.875rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px; /* Pill shape */
+}
+
+.connection-status.connected {
+  background-color: #10b981; /* Green */
+  color: #ffffff;
+}
+
+.connection-status.disconnected {
+  background-color: #ef4444; /* Red */
+  color: #ffffff;
+}
+
+.header-right button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ffffff;
+  border-radius: 0.375rem; /* Rounded corners */
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.header-right button.active-convo-btn {
+  background-color: #ffffff;
+  color: var(--accent-color); /* Indigo text */
+  border-color: transparent;
+}
+
+.header-right button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.header-right button.active-convo-btn:hover {
+  background-color: var(--accent-color-light); /* Lighter indigo background on hover */
+}
+
+
+.error-banner {
+  background-color: var(--error-bg); /* Light red */
+  color: var(--error-text); /* Dark red */
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+
+.main-content {
+  display: flex;
+  flex-grow: 1; /* Allow main content to fill remaining space */
+  overflow: hidden; /* Prevent scrolling here, manage within children */
+  background-color: var(--bg-secondary); /* Slightly off-white background for content area */
+}
+
+/* Placeholder styles for child components - will be refined */
+.sidebar {
+  width: 60px; /* Narrow sidebar as per image */
+  background-color: var(--sidebar-bg); /* Indigo */
+  flex-shrink: 0;
+  padding-top: 1rem;
+  /* Add icons/buttons later */
+  color: white; /* Placeholder text color */
+  text-align: center;
+}
+
+.chat-area {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-tertiary); /* Chat background */
+  border-right: 1px solid var(--border-color); /* Separator line */
+  overflow: hidden; /* Manage scrolling within .messages */
+}
+
+.stage-indicator {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    text-align: right;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--bg-primary);
+}
+
+.messages {
+  flex-grow: 1;
+  overflow-y: auto; /* Enable scrolling for messages */
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.message {
+  max-width: 75%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem; /* Rounded message bubbles */
+  word-wrap: break-word;
+}
+
+.message.assistant {
+  background-color: var(--message-assistant); /* Light background */
+  color: var(--text-primary); /* Text color */
+  align-self: flex-start;
+  border-bottom-left-radius: 0.125rem; /* Slightly flatter corner */
+}
+
+.message.human {
+  background-color: var(--message-human); /* Accent color */
+  color: var(--message-human-text);
+  align-self: flex-end;
+  border-bottom-right-radius: 0.125rem; /* Slightly flatter corner */
+}
+
+.message p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.message .timestamp {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--message-timestamp-light); /* Gray timestamp */
+    margin-top: 0.25rem;
+    text-align: right;
+}
+.message.human .timestamp {
+    color: var(--message-timestamp-dark); /* Lighter gray for dark background */
+}
+
+
+.input-area {
+  display: flex;
+  padding: 0.75rem;
+  border-top: 1px solid var(--border-color); /* Separator line */
+  background-color: var(--bg-primary);
+  flex-shrink: 0;
+}
+
+.input-area input {
+    flex-grow: 1;
+    padding: 0.75rem;
+    border: 1px solid var(--btn-default-border);
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+.input-area input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+.input-area button {
+    padding: 0.75rem 1rem;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+}
+.input-area button:hover {
+    background-color: var(--accent-hover); /* Darker accent */
+}
+
+
+.overview-panel {
+  width: 350px; /* Fixed width for the side panel */
+  flex-shrink: 0;
+  background-color: var(--bg-tertiary);
+  padding: 1.5rem;
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.overview-panel h3, .overview-panel h4 {
+    margin: 0 0 0.75rem 0;
+    color: var(--text-primary); /* Heading color */
+}
+.overview-panel h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.75rem;
+}
+.overview-panel h4 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.lead-summary {
+    background-color: var(--bg-primary);
+    padding: 1rem;
+    border-radius: 0.375rem;
+    border: 1px solid var(--border-color);
+    position: relative; /* For stage badge positioning */
+}
+.lead-summary p {
+    margin: 0 0 0.25rem 0;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+.lead-summary p:first-child {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.stage-badge {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background-color: var(--accent-color-light); /* Light accent */
+    color: var(--accent-color); /* Accent */
+    padding: 0.25rem 0.6rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.quick-actions button, .suggested-questions button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0.6rem 1rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid var(--btn-default-border);
+    border-radius: 0.375rem;
+    background-color: var(--btn-default-bg);
+    color: var(--btn-default-text);
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.quick-actions button:hover, .suggested-questions button:hover {
+    background-color: var(--btn-default-hover-bg);
+    border-color: var(--btn-default-hover-border);
+}

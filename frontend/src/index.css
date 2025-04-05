@@ -1,0 +1,111 @@
+:root {
+  /* Light theme (default) */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-tertiary: #ffffff;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --border-color: #e5e7eb;
+  --accent-color: #4f46e5;
+  --accent-color-light: #e0e7ff;
+  --accent-hover: #4338ca;
+  --message-human: #4f46e5;
+  --message-human-text: #ffffff;
+  --message-assistant: #f1f5f9;
+  --message-system: #f8fafc;
+  --message-timestamp-light: #94a3b8;
+  --message-timestamp-dark: #c7d2fe;
+  --error-bg: #fecaca;
+  --error-text: #b91c1c;
+  --success-bg: #10b981;
+  --success-text: #ffffff;
+  --btn-default-bg: #ffffff;
+  --btn-default-text: #475569;
+  --btn-default-border: #cbd5e1;
+  --btn-default-hover-bg: #f1f5f9;
+  --btn-default-hover-border: #94a3b8;
+  --sidebar-bg: #4f46e5;
+  --product-card-bg: #f0f7ff;
+  --product-card-border: #dbeafe;
+  --product-card-text: #1e40af;
+}
+
+/* Dark theme */
+.dark-theme {
+  --bg-primary: #121926;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #1e293b;
+  --text-primary: #e2e8f0;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --border-color: #334155;
+  --accent-color: #6366f1;
+  --accent-color-light: #312e81;
+  --accent-hover: #818cf8;
+  --message-human: #6366f1;
+  --message-human-text: #ffffff;
+  --message-assistant: #334155;
+  --message-system: #1e293b;
+  --message-timestamp-light: #94a3b8;
+  --message-timestamp-dark: #c7d2fe;
+  --error-bg: #7f1d1d;
+  --error-text: #fecaca;
+  --success-bg: #059669;
+  --success-text: #ffffff;
+  --btn-default-bg: #334155;
+  --btn-default-text: #e2e8f0;
+  --btn-default-border: #475569;
+  --btn-default-hover-bg: #475569;
+  --btn-default-hover-border: #64748b;
+  --sidebar-bg: #4f46e5;
+  --product-card-bg: #1e3a8a;
+  --product-card-border: #1e40af;
+  --product-card-text: #93c5fd;
+}
+
+/* Basic CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+/* Add other global styles or Tailwind directives below */
+/* Example for Tailwind (requires setup) */
+/*
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*/

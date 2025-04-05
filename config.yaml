@@ -1,0 +1,36 @@
+# Configuration for AI Engagement Agent Features
+
+# Enable/disable specific tool integrations
+# Set to 'false' to disable a feature, 'true' to enable
+features:
+  # Core LLM functionality (should generally be true)
+  llm_agent: true
+
+  # External Service Integrations
+  ocr:
+    enabled: true # Business card scanning via Google Vision
+  database:
+    enabled: true # Lead/Conversation saving via Firebase Firestore
+    # Specify database type if multiple options are supported later
+    # type: firestore
+  scheduling:
+    enabled: true # Meeting scheduling via Google Calendar
+  email:
+    enabled: true # Email sending via SMTP
+
+  # Internal Processing Features
+  conversation_analysis:
+    enabled: true # LLM-based analysis of conversations for lead profile extraction
+  progressive_memory:
+    enabled: false # Feature not fully implemented yet
+
+# LLM Configuration (Optional overrides or preferences)
+llm:
+  primary_provider: openai # 'anthropic' or 'openai'
+  anthropic_model: claude-3-haiku-20240307 # Keep for reference or potential fallback
+  openai_model: gpt-4o-mini # Default OpenAI model
+  temperature: 0.1
+
+# Add other configuration sections as needed (e.g., logging levels)
+logging:
+  level: INFO # e.g., DEBUG, INFO, WARNING, ERROR

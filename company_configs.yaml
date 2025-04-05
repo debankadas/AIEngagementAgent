@@ -1,0 +1,61 @@
+default:
+  display_name: "Our Company"
+  company_info: "A leading provider of innovative solutions."
+  products_info: "We offer a range of cutting-edge products."
+  company_type: "product"
+  product_varieties: ["Product A", "Product B", "Product C"]
+  required_fields: ["contact_name", "email", "interest_level", "preferred_product", "order_volume", "preferred_communication", "custom_interest"]
+  optional_fields: ["company_name", "role", "pricing_catalog_request", "sample_tasting_request", "early_access_interest", "customer_objections"]
+  conversation_goal: "Gauge initial interest and collect basic contact information."
+  field_labels:
+    order_volume: "Minimum Order Quantity (MOQ)"
+
+abc_roosters:
+  display_name: "ABC Roosters"
+  company_info: "Specialists in premium poultry feed."
+  products_info: "Organic feed blends, custom formulations available."
+  company_type: "product"
+  product_varieties: ["Starter Feed", "Grower Feed", "Layer Feed", "Broiler Feed", "Custom Formulations"]
+  required_fields: ["contact_name", "email", "phone", "farm_size", "current_supplier", "preferred_product", "order_volume", "preferred_communication", "custom_interest"]
+  optional_fields: ["pricing_catalog_request", "sample_tasting_request", "early_access_interest", "customer_objections"]
+  conversation_goal: "Identify large farms using competitors and gather detailed contact info for sales outreach."
+  initial_greeting_prompt: "Hi there! Welcome to the ABC Roosters booth at {event_name}. Are you involved in poultry farming?"
+  field_labels:
+    order_volume: "Minimum Order Quantity (MOQ)"
+
+coffee_co:
+  display_name: "Coffee Co."
+  company_info: "Artisan coffee roasters focusing on sustainable sourcing."
+  products_info: "Single-origin beans, espresso blends, cold brew concentrates."
+  company_type: "product"
+  product_varieties: ["Ethiopian Single-Origin", "Colombian Single-Origin", "Espresso Blend", "Cold Brew Concentrate", "Decaf Options", "Seasonal Specials"]
+  required_fields: ["contact_name", "email", "business_type", "preferred_product", "order_volume", "preferred_communication", "custom_interest"]
+  optional_fields: ["current_roaster", "pricing_catalog_request", "sample_tasting_request", "early_access_interest", "customer_objections", "estimated_volume_kg_month"]
+  conversation_goal: "Qualify cafes and restaurants needing wholesale coffee, get contact info and volume estimate."
+  field_labels:
+    order_volume: "Minimum Order Quantity (MOQ)"
+
+tech_innovators:
+  display_name: "Tech Innovators Inc."
+  company_info: "Developing next-generation AI platforms."
+  products_info: "AI-driven analytics, custom model training, cloud deployment solutions."
+  company_type: "service"
+  product_varieties: ["AI Analytics Platform", "Custom ML Model Training", "Cloud Deployment Solutions", "Edge AI Integration", "AI Consulting Services"]
+  required_fields: ["contact_name", "email", "company_name", "primary_use_case", "preferred_product", "engagement_scope", "preferred_communication", "custom_interest"]
+  optional_fields: ["current_ai_usage", "timeline_for_implementation", "pricing_catalog_request", "demo_request", "early_access_interest", "customer_objections"]
+  conversation_goal: "Understand potential client's AI needs and identify qualified leads for technical demos."
+  field_labels:
+    engagement_scope: "Project Scale/Scope"
+    demo_request: "Technical Demo Request"
+
+green_gardens:
+  display_name: "Green Gardens Supply"
+  company_info: "Providers of organic gardening tools and supplies."
+  products_info: "Heirloom seeds, composters, non-toxic pest control, ergonomic tools."
+  company_type: "product"
+  product_varieties: ["Heirloom Seeds", "Composting Systems", "Organic Pest Control", "Ergonomic Garden Tools", "Soil Amendments", "Indoor Gardening Kits"]
+  required_fields: ["contact_name", "email", "gardening_experience_level", "preferred_product", "order_volume", "preferred_communication", "custom_interest"]
+  optional_fields: ["garden_size", "pricing_catalog_request", "sample_tasting_request", "early_access_interest", "customer_objections"]
+  conversation_goal: "Engage hobbyist gardeners, understand their experience, and collect email for newsletter sign-up."
+  field_labels:
+    order_volume: "Minimum Order Quantity (MOQ)"
