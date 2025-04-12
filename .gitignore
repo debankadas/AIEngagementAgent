@@ -97,7 +97,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
+app/.env
 .venv
 env/
 venv/
@@ -213,3 +213,5 @@ ehthumbs.db
 Thumbs.db
 
 nosetests
+
+.idea/
