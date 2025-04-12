@@ -18,6 +18,10 @@ from pydantic import BaseModel, Field, ValidationError
 # Assuming models are in the parent directory structure
 from ..models.lead import BusinessCardInfo
 from ..config import is_feature_enabled, get_llm_config # Import config checker
+from dotenv import load_dotenv
+
+path = os.path.join(os.path.dirname(__file__), '.env')
+load_dotenv(path)
 
 # Check credentials only if feature is intended to be enabled
 OCR_ENABLED = is_feature_enabled('ocr.enabled')

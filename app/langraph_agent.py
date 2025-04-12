@@ -33,6 +33,10 @@ from .utils.helpers import format_lead_info_summary, format_follow_up_summary, p
 from .config import get_llm_config
 
 # --- State Definition ---
+from dotenv import load_dotenv
+
+path = os.path.join(os.path.dirname(__file__), '.env')
+load_dotenv(path)
 
 class LeadState(TypedDict):
     """Represents the state of the conversation and lead data."""
