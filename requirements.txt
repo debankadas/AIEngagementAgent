@@ -56,3 +56,4 @@ isort
 flake8
 PyYAML  # For reading config.yaml
 pytz    # For timezone handling in scheduling tool
+urllib3>=2.6.0 # not directly required, pinned by Snyk to avoid a vulnerability
